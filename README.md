@@ -4,7 +4,7 @@
 
 # Usage
 
-```golang
+```go
 package main
 
 import ("github.com/Krognol/gofycat"

@@ -284,11 +284,14 @@ func (g *Cat) GetListOfFollowers() (*http.Response, error) {
 // Gfycat object
 type Gfycat struct {
 	GfyID string `json:"gfyId"` 
+	GfyName string `json:"gfyName"`
 	GfyNumber string `json:"gfyNumber"`
 	WebmURL string `json:"webmUrl"`
 	GifURL string `json:"gifUrl"`
 	MobileURL string `json:"mobileUrl"`
 	MobilePosterURL string `json:"mobilePosterUrl"`
+	MiniURL string `json:"miniUrl"`
+	MiniPosterURL string `json:"miniPosterUrl"`
 	PosterURL string `json:"posterUrl"`
 	Thumb360URL string `json:"thumb360Url"`
 	Thumb360PosterURL string `json:"thumb360PosterUrl"`
@@ -298,25 +301,28 @@ type Gfycat struct {
 	MJPGURL string `json:"mjpgUrl"`
 	Width int `json:"width"` 
 	Height int `json:"height"`
+	AvgColor string `json:"avgColor"`
 	FrameRate int `json:"frameRate"`
 	NumFrames int `json:"numFrames"`
 	MP4Size int `json:"mp4Size"`
 	WebmSize int `json:"webmSize"`
 	GifSize int `json:"gifSize"`
-	CreateDate string `json:"createDate"` 
+	Source int `json:"source"`
+	CreateDate int `json:"createDate"` 
 	NSFW string `json:"nsfw"`
 	MP4URL string `json:"mp4Url"`
-	Likes int `json:"likes"`
-	Published int `json:"published"`
+	//Likes int `json:"likes"`
+	//Published int `json:"published"`
 	Dislikes int `json:"dislikes"`
 	ExtraLemmas string `json:"extraLemmas"`
 	MD5 string `json:"md5"`
 	Views int `json:"views"`
-	Tags interface{} `json:"tags"`
+	Tags []string `json:"tags"`
 	Username string `json:"userName"`
-	GfyName string `json:"gfyName"`
 	Title string `json:"title"`
 	Description string `json:"description"`
+	LanguageCategories interface{} `json:"languageCategories"`
+	DomainWhiteList []string `json:"domainWhitelist"`
 }
 
 type UserFeed struct {
